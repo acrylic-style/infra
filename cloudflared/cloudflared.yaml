@@ -88,7 +88,7 @@ data:
     # E.g. `cloudflared tunnel route dns example-tunnel tunnel.example.com`.
     ingress:
     - hostname: argocd.acrylicstyle.xyz
-      service: http://argocd-server.argocd.svc
+      service: https://argocd-server.argocd.svc
       originRequest:
         noTLSVerify: true
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
