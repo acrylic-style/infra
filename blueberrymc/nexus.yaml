@@ -36,6 +36,13 @@ spec:
             memory: "3Gi"
         ports:
           - containerPort: 8081
+      initContainers:
+      - name: chmod
+        image: alpine:3.17.0
+        volumeMounts:
+        - name: sonatype-work
+          mountPath: /sonatype-work
+        command: ["chmod", "777", "/sonatype-work"]
       volumes:
       - name: nexus-data
         persistentVolumeClaim:
