@@ -15,7 +15,10 @@ metadata:
 data:
   config: |
     [global]
-    osd_pool_default_size = 1
+    osd_pool_default_size = 3
+    osd_pool_default_min size = 2
+    osd_pool_default_pg_num = 256
+    osd_pool_default_pgp_num = 256
     mon_warn_on_pool_no_redundancy = false
     bdev_flock_retry = 20
     bluefs_buffered_io = false
@@ -42,15 +45,15 @@ spec:
   crashCollector:
     disable: true
   storage:
-    useAllNodes: true
-    useAllDevices: true
-    # nodes:
-    #   - name: "perfectboat"
-    #     devices:
-    #       - name: "/dev/disk/by-id/wwn-0x600224807d4754c8971e16e0bce757be"
-    #   - name: "acrylicstyle"
-    #     devices:
-    #       - name: "/dev/disk/by-id/ata-WDC_WD2500JD-00HBB0_WD-WMAL72171370"
+    useAllNodes: false
+    useAllDevices: false
+    nodes:
+      - name: "perfectboat"
+        devices:
+          - name: "/dev/disk/by-id/wwn-0x600224807d4754c8971e16e0bce757be"
+      - name: "acrylicstyle"
+        devices:
+          - name: "/dev/disk/by-id/ata-WDC_WD2500JD-00HBB0_WD-WMAL72171370"
   healthCheck:
     daemonHealth:
       mon:
