@@ -1,0 +1,46 @@
+# Overview of PriorityClasses
+# (99999) system-critical: Resources that should never be removed
+# (50000) unknown: Default value (This priority should not be marked explicitly in a manifest file)
+# (30000) production-service: The resource is in production.
+# (20000) staging-service: The resource is in development or staging and can be removed if the system resource is on the low.
+
+---
+
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: system-critical
+value: 99999
+globalDefault: false
+description: "Resources that should never be removed"
+
+---
+
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: unknown
+value: 50000
+globalDefault: true
+description: "Default value (This priority should not be marked explicitly in a manifest file)"
+
+---
+
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: production-service
+value: 30000
+globalDefault: false
+description: "The resource is in production."
+
+---
+
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: staging-service
+value: 20000
+globalDefault: false
+description: "The resource is in development or staging and can be removed if the system resource is on the low."
+
