@@ -26,9 +26,6 @@ spec:
         volumeMounts:
         - name: nexus-data
           mountPath: /nexus-data
-        - name: nexus-data
-          mountPath: /opt/nexus
-          subPath: opt-nexus
         resources:
           requests:
             cpu: "1000m"
