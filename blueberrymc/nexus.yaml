@@ -25,7 +25,6 @@ spec:
         volumeMounts:
         - name: nexus-data
           mountPath: /nexus-data
-          readOnly: true
         resources:
           requests:
             cpu: "1000m"
