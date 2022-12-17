@@ -25,6 +25,8 @@ spec:
         volumeMounts:
         - name: nexus-data
           mountPath: /nexus-data
+        - name: sonatype-work
+          mountPath: /sonatype-work
         resources:
           requests:
             cpu: "1000m"
@@ -38,6 +40,8 @@ spec:
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus-data-claim
+      - name: sonatype-work
+        emptyDir: {}
       priorityClassName: production-service
       terminationGracePeriodSeconds: 60 # 1 minute
 ---
