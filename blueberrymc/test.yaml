@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: filebrowser
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 2
   template:
     metadata:
