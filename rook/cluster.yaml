@@ -218,8 +218,9 @@ spec:
   removeOSDsIfOutAndSafeToRemove: false
   priorityClassNames:
     #all: rook-ceph-default-priority-class
-    mon: system-node-critical
-    osd: system-node-critical
+    all: system-node-critical
+    # mon: system-node-critical
+    # osd: system-node-critical
     mgr: system-cluster-critical
     #crashcollector: rook-ceph-crashcollector-priority-class
   storage: # cluster level storage configuration and selection
@@ -312,3 +313,14 @@ data:
     bdev_flock_retry = 20
     bluefs_buffered_io = false
     mon_data_avail_warn = 10
+---
+apiVersion: ceph.rook.io/v1
+kind: CephBlockPool
+metadata:
+  name: builtin-mgr
+  namespace: rook-ceph # namespace:cluster
+spec:
+  name: .mgr
+  replicated:
+    size: 2
+    requireSafeReplicaSize: false
