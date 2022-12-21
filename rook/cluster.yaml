@@ -50,7 +50,7 @@ spec:
         devices:
           - name: "/dev/disk/by-id/scsi-3600224807d4754c8971e16e0bce757be"
         config:
-          metadataDevice: "/dev/disk/by-id/scsi-360022480ae7f0bedbc1035fab894d156"
+          metadataDevice: sdc
       - name: "acrylicstyle"
         devices:
           - name: "/dev/disk/by-id/ata-WDC_WD2500JD-00HBB0_WD-WMAL72171370"
