@@ -45,6 +45,7 @@ spec:
     useAllNodes: false
     useAllDevices: false
     #deviceFilter:
+    config:
     nodes:
       - name: "perfectboat"
         devices:
