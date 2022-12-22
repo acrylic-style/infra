@@ -93,6 +93,8 @@ data:
         noTLSVerify: true
     - hostname: repo.blueberrymc.net
       service: http://nexus-svc.blueberrymc.svc:8081
+    - hostname: repo.acrylicstyle.xyz
+      service: http://nexus-svc.acrylicstyle.svc:8081
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is
     # in the connection from cloudflared to your local service, not from the internet to cloudflared.
