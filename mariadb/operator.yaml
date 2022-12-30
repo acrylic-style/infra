@@ -23,7 +23,7 @@ spec:
             - /manager
           args:
             - --leader-elect
-          image: mmontes11/mariadb-operator@sha256:df819724211e2c8e2b8d5d377ce3492510db5b0a5fcc43a02adac0d45fbd5f3d
+          image: mmontes11/mariadb-operator:v0.0.4
           name: manager
           securityContext:
             allowPrivilegeEscalation: false
