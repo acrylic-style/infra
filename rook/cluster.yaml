@@ -20,10 +20,10 @@ data:
     bdev_flock_retry = 20
     bluefs_buffered_io = false
     mon_data_avail_warn = 10
-    auth cluster required = none
-    auth service required = none
-    auth client required = none
-    auth supported = none
+    auth cluster required = cephx
+    auth service required = cephx
+    auth client required = cephx
+    auth supported = cephx
 ---
 apiVersion: ceph.rook.io/v1
 kind: CephCluster
