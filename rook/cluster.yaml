@@ -58,6 +58,9 @@ spec:
         #   metadataDevice: "sdc"
         #   databaseSizeMB: "1024"
         #   journalSizeMB: "1024"
+      - name: "perfectboat2"
+        devices:
+          - name: "/dev/sdb"
       # - name: "acrylicstyle"
       #   devices:
       #     - name: "/dev/disk/by-id/ata-WDC_WD2500JD-00HBB0_WD-WMAL72171370"
