@@ -50,10 +50,10 @@ spec:
       - name: "perfectboat"
         devices:
           - name: "/dev/disk/by-id/scsi-3600224807d4754c8971e16e0bce757be"
-        config:
-          metadataDevice: "sdc"
-          databaseSizeMB: "1024"
-          journalSizeMB: "1024"
+        # config:
+        #   metadataDevice: "sdc"
+        #   databaseSizeMB: "1024"
+        #   journalSizeMB: "1024"
       # - name: "acrylicstyle"
       #   devices:
       #     - name: "/dev/disk/by-id/ata-WDC_WD2500JD-00HBB0_WD-WMAL72171370"
