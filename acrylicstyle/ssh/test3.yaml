@@ -24,7 +24,7 @@ spec:
           adduser --disabled-password --gecos '' perfectboat &&
           mkdir /home/perfectboat/.ssh && touch /home/perfectboat/.ssh/authorized_keys && chmod -R 600 /home/perfectboat/.ssh && chown -hR perfectboat:perfectboat /home/perfectboat/.ssh
           echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGNg17ghsz/2JsbGWj0woNKpzICM60IYSjry2yhZjm8F pabo-main' >> /home/perfectboat/.ssh/authorized_keys &&
-          && sleep 99999999d"
+          sleep 99999999d"
         ]
         volumeMounts:
         - name: data
