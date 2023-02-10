@@ -27,19 +27,3 @@ spec:
       protocol: UDP
     - port: 53
       protocol: TCP
----
-kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: default-network-policy
-  namespace: acrylicstyle-ssh
-spec:
-  podSelector:
-    matchLabels:
-      network/allow-egress: "true"
-  policyTypes:
-    - Egress
-  egress:
-  - to:
-    - ipBlock:
-        cidr: 0.0.0.0/0
