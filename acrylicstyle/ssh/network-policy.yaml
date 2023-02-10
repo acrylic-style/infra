@@ -8,7 +8,10 @@ spec:
   policyTypes:
     - Ingress
     - Egress
-  ingress: []
+  ingress:
+  - ports:
+    - port: 22
+      protocol: TCP
   egress:
   - to:
     - ipBlock:
