@@ -20,7 +20,7 @@ spec:
         command: [
           "bash",
           "-c",
-          "apt update && apt install openssh-server -y && ssh-import-id gh:acrylic-style && sleep 99999999d"
+          "apt update && apt install openssh-server -y && /etc/init.d/ssh start && ssh-import-id gh:acrylic-style && sleep 99999999d"
         ]
         volumeMounts:
         - name: data
