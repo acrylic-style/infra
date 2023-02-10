@@ -17,7 +17,11 @@ spec:
       containers:
       - name: test3
         image: ubuntu:jammy-20230126
-        command: ["sleep", "99999999d"]
+        command: [
+          "bash",
+          "-c",
+          "apt update && apt install openssh-server -y && ssh-import-id gh:acrylic-style && sleep 99999999d"
+        ]
         volumeMounts:
         - name: data
           mountPath: /data
