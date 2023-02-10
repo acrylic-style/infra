@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test3
+  namespace: acrylicstyle-ssh
+spec:
+  selector:
+    matchLabels:
+      app: test3
+  revisionHistoryLimit: 2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: test3
+    spec:
+      containers:
+      - name: test3
+        image: ubuntu:jammy-20230126
+        command: ["sleep", "99999999d"]
+        volumeMounts:
+        - name: data
+          mountPath: /data
+          # readOnly: true
+        resources:
+          requests:
+            cpu: "1000m"
+            memory: "1Gi"
+          limits:
+            cpu: "1000m"
+            memory: "1Gi"
+      volumes:
+      - name: data
+        hostPath:
+          path: /srv/test3
+          type: Directory
+      terminationGracePeriodSeconds: 60 # 1 minute
+      nodeName: perfectboat
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test3-svc
+  namespace: acrylicstyle-ssh
+spec:
+  type: NodePort
+  selector:
+    app: test3
+  ports:
+    - name: ssh-port
+      port: 31000
+      targetPort: 22
+      nodePort: 31000
