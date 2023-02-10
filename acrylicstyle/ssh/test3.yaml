@@ -22,7 +22,7 @@ spec:
           "-c",
           "apt update && apt install openssh-server -y && /etc/init.d/ssh start &&
           adduser --disabled-password --gecos '' perfectboat &&
-          mkdir /home/perfectboat/.ssh && touch /home/perfectboat/.ssh/authorized_keys && chmod -R 600 /home/perfectboat/.ssh && chown -hR perfectboat:perfectboat /home/perfectboat/.ssh &&
+          mkdir /home/perfectboat/.ssh && touch /home/perfectboat/.ssh/authorized_keys && chmod -R 700 /home/perfectboat/.ssh && chown -hR perfectboat:perfectboat /home/perfectboat/.ssh &&
           echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGNg17ghsz/2JsbGWj0woNKpzICM60IYSjry2yhZjm8F pabo-main' >> /home/perfectboat/.ssh/authorized_keys &&
           sleep 99999999d"
         ]
