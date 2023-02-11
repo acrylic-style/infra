@@ -23,7 +23,6 @@ data:
     auth cluster required = cephx
     auth service required = cephx
     auth client required = cephx
-    auth supported = cephx
 ---
 apiVersion: ceph.rook.io/v1
 kind: CephCluster
