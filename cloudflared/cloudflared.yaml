@@ -96,7 +96,7 @@ data:
     - hostname: repo.acrylicstyle.xyz
       service: http://nexus-svc.acrylicstyle.svc:8081
     - hostname: perfectboat2.acrylicstyle.xyz
-      service: ssh://192.168.0.221:22
+      service: ssh://192.168.0.100:80
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is
     # in the connection from cloudflared to your local service, not from the internet to cloudflared.
