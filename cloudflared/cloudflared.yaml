@@ -104,4 +104,4 @@ data:
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is
     # in the connection from cloudflared to your local service, not from the internet to cloudflared.
     # This rule matches any traffic which didn't match a previous rule, and responds with HTTP 404.
-    - service: http_status:404
+    - service: http://192.168.0.220:8080
