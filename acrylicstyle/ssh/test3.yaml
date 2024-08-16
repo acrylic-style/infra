@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: test3
-        image: ubuntu:jammy-20230126
+        image: ubuntu:24.04
         command: [
           "bash",
           "-c",
@@ -38,7 +38,7 @@ spec:
             memory: "1Gi"
       initContainers:
       - name: chmod
-        image: ubuntu:jammy-20230126
+        image: ubuntu:24.04
         command: [ "chmod", "-Rv", "777", "/data" ]
         volumeMounts:
         - name: data
