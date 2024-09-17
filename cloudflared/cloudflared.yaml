@@ -95,7 +95,7 @@ data:
     - hostname: repo.blueberrymc.net
       service: http://nexus-svc.blueberrymc.svc:8081
     - hostname: repo.acrylicstyle.xyz
-      service: http://nexus-svc.acrylicstyle.svc:8081
+      service: http://192.168.0.220:8084
     - hostname: perfectboat2.acrylicstyle.xyz
       service: http://192.168.0.100:80
     - hostname: api.blueberrymc.net
