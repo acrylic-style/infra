@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: data-editor
-        image: ubuntu@sha256:ca5534a51dd04bbcebe9b23ba05f389466cf0c190f1f8f182d7eea92a9671d00
+        image: ubuntu@sha256:42527649dbc4f9197a6073f426f488cbff0e9cc9f2afce32d91c383e4875634a
         command: [ "sleep", "99999999" ]
         volumeMounts:
         - name: data
